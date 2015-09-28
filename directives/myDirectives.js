@@ -23,3 +23,12 @@ courseRoster.directive("kid", function () {
       ' <div class="btn btn-info" id="chore_button" ng-click="done({chore:chore})">I\'m done!</div>'
   }
 });
+
+courseRoster.directive("phone", function () {
+  return {
+    scope: {
+      dial: "&"
+    },
+    template: '<div class="btn btn-info" id="dial_button" ng-click="dial()">Call home!</div>'
+  }
+});

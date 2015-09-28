@@ -5,4 +5,8 @@ courseRoster.controller('CoursesCtrl', function CoursesCtrl($scope, CoursesFacto
   $scope.logChore = function(chore) {
     alert(chore + " is done!");
   }
+
+  $scope.callHome = function() {
+    alert("Called Home!");
+  }
 });
