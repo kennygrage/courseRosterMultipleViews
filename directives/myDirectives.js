@@ -39,6 +39,15 @@ courseRoster.directive("drink", function() {
     scope: {
       flavor: "="
     },
-    template: '<div id="flavor">{{flavor}}</div>'
+    template: '<input id="flavor_dir_text" type="text" ng-model="flavor">'
+  }
+});
+
+courseRoster.directive("soda", function() {
+  return {
+    scope: {
+      flavor2: "@"
+    },
+    template: '<div id="soda_output">1 - {{flavor2}}</div>',
   }
 });

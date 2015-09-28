@@ -57,4 +57,3 @@ $scope.changeData = function () {
           street: counter + ' Cedar Point St.'
       };
 };
-0:51

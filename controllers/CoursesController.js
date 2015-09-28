@@ -10,5 +10,5 @@ courseRoster.controller('CoursesCtrl', function CoursesCtrl($scope, CoursesFacto
     alert(message_text);
   }
 
-  $scope.ctrlFlavor = "blackberry";
+  $scope.ctrlSoda = "blackberry";
 });

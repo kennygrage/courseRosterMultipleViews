@@ -25,8 +25,16 @@
   <phone dial="callHome(message)"></phone>
 </div>
 
-<div ng-app="flavorApp">
+<div ng-app="drinkApp">
+  Ctrl
+  <input type="text" id="flavor_ctrl_text" ng-model="ctrlFlavor">
+  Dir
   <drink flavor="ctrlFlavor"></drink>
+</div>
+
+<div ng-app="drinkApp">
+  <input type="text" id="soda_text" ng-model="ctrlSoda">
+  <soda flavor2="{{ctrlSoda}}"></soda>
 </div>
 
 <div ui-view="body"></div>
