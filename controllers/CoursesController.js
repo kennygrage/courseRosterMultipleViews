@@ -6,7 +6,9 @@ courseRoster.controller('CoursesCtrl', function CoursesCtrl($scope, CoursesFacto
     alert(chore + " is done!");
   }
 
-  $scope.callHome = function() {
-    alert("Called Home!");
+  $scope.callHome = function(message_text) {
+    alert(message_text);
   }
+
+  $scope.ctrlFlavor = "blackberry";
 });

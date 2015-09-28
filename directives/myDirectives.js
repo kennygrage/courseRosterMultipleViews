@@ -12,7 +12,7 @@ courseRoster.directive("changeClass", function() {
   }
 });
 
-courseRoster.directive("kid", function () {
+courseRoster.directive("kid", function() {
   return {
     restrict: "E",
     scope: {
@@ -24,11 +24,21 @@ courseRoster.directive("kid", function () {
   }
 });
 
-courseRoster.directive("phone", function () {
+courseRoster.directive("phone", function() {
   return {
     scope: {
       dial: "&"
     },
-    template: '<div class="btn btn-info" id="dial_button" ng-click="dial()">Call home!</div>'
+    template: '<input id="dial_text" type="text" ng-model="value">' +
+      '<div class="btn btn-info" id="dial_button" ng-click="dial({message:value})">Call home!</div>'
+  }
+});
+
+courseRoster.directive("drink", function() {
+  return {
+    scope: {
+      flavor: "="
+    },
+    template: '<div id="flavor">{{flavor}}</div>'
   }
 });
