@@ -20,7 +20,7 @@ courseRoster.config(function($stateProvider, $urlRouterProvider) {
         templateUrl: "partials/header.html"
       },
       'body': {
-        templateUrl: "partials/courses.html"
+        templateUrl: "partials/courses.html",
         controller: 'CoursesCtrl'
       },
     }
@@ -33,8 +33,9 @@ courseRoster.config(function($stateProvider, $urlRouterProvider) {
         templateUrl: "partials/header.html"
       },
       'body': {
-        templateUrl: "partials/courses.students.html"
+        templateUrl: "partials/courses.students.html",
         controller: 'StudentsCtrl'
       },
+    }
   });
 });
