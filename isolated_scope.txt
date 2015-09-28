@@ -1,0 +1,59 @@
+@ Local Scope Property  //binds strings
+
+This directive code creates an isolated scope that allows a name property to be bound to a value that is passed in from the "outside world".
+    angular.module('directivesModule').directive('myIsolatedScopeWithName', function () {
+        return {
+            scope: {
+                name: '@'
+            },
+            template: 'Name: {{ name }}' //the Name variable could be anything and will name on what is in name
+        };
+    });
+
+
+
+
+
+
+= Local Scope Property  //binds objects
+
+    angular.module('directivesModule').directive('myIsolatedScopeWithModel', function () {
+        return {
+            scope: {
+                person: '=' //two-way data binding
+            },
+            template: '<ul><li ng-repeat="prop in person">{{ prop }}</li></ul>'
+        };
+    });
+
+
+
+
+
+& Local Scope Property  //binds functions
+
+    angular.module('directivesModule').directive('myIsolatedScopeWithModelAndFunction', function () {
+        return {
+            scope: {
+                person: '=',
+                action: '&'
+            },
+            template: '<ul><li ng-repeat="prop in person">{{ prop }}</li></ul> ' +
+            '<button ng-click="action()">Change Data</button>'
+        };
+    });
+
+Example using this directive:
+<div my-isolated-scope-with-model-and-function
+     person="customer"
+     action="changeData()">
+</div>
+
+//then the changeData() function:
+$scope.changeData = function () {
+      counter++;
+      $scope.customer = {
+          name: 'James',
+          street: counter + ' Cedar Point St.'
+      };
+};
